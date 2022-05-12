@@ -14,9 +14,9 @@ let id;
 form.addEventListener("submit", (e) => {
   container.innerHTML = "";
   e.preventDefault();
-  const name = document.getElementById("name").value;
+  const name = document.getElementById("name").value.toLowerCase();
   const age = document.getElementById("age").value;
-  const country = document.getElementById("country").value;
+  const country = document.getElementById("country").value.toLowerCase();
   !editUser
     ? addUser(name, age, country)
     : updateUser(id, { name, age, country }) && (editUser = false);
